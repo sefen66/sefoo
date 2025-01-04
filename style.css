@@ -217,7 +217,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #0000ff, #4b0082, #000080, #8a2be2, #0000ff);
+  background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff9a7b, #fdbb2d);
+
     background-size: 400% 400%;
     animation: spin 3s linear infinite, gradient-shift 8s ease infinite;
     position: relative; /* لجعل الدائرة مستقلة */
