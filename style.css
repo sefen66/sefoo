@@ -220,7 +220,7 @@ ul {
   background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff9a7b, #fdbb2d);
 
     background-size: 400% 400%;
-    animation: spin 3s linear infinite, gradient-shift 8s ease infinite;
+    animation: spin 2s linear infinite, gradient-shift 8s ease infinite;
     position: relative; /* لجعل الدائرة مستقلة */
     z-index: 0; /* تحت الصورة */
 }
