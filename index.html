@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sefen Zkarya - App Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         .social-links {
@@ -34,27 +34,33 @@
     
 </head>
 <body>
-    <script src="js/script.js"></script>
+    <script src="script.js" defer></script>
     <header class="hero">
-        <nav class="navbar">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="hero-content">
-            <h1 class="highlighted-text">Welcome, I'm Sefen Zkarya</h1>
-            <p>Turning Ideas into Reality | 17-Year-Old App Developer</p>
-            <a href="#portfolio" class="btn">Discover My Work</a>
-        </div>
-    </header>
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        
+
+          
+          
+    </nav>
+    <div class="hero-content">
+        <h1 class="highlighted-text">Welcome, I'm <span>Sefen Zkarya</span></h1>
+        <p>Turning Ideas into Reality | 17-Year-Old App Developer</p>
+        <a href="#portfolio" class="btn">Discover My Work</a>
+    </div>
+</header>
+
     
     <main>
         <section id="about" class="section">
             <h2>About Me</h2>
             <div class="profile-container">
                 <div class="outer-circle"></div>
-                <img src="profile.jpg" alt="Sefen Zkarya" class="profile-image">
+                <img src="images/profile.jpg" alt="Sefen Zkarya" class="profile-image">
             </div>
             <p>Hi! I'm Sefen Zkarya, a 17-year-old app developer from Suez, Egypt. I am passionate about creating innovative and user-friendly mobile apps. I work at ICT Programming, collaborating on exciting tech projects. Additionally, I offer freelance web development services on Fiverr, helping clients bring their ideas to life.
               
@@ -63,6 +69,74 @@
                 </div>
                 
         </section>
+        <section id="skills">
+            <h2>My <span>Skills</span></h2>
+            <div class="skills-container">
+              <div class="coding-skills">
+                <h3>Coding Skills</h3>
+                <div class="skill">
+                  <label>HTML</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 80%;"></div>
+                  </div>
+                  <div class="percentage">80%</div>
+                </div>
+                <div class="skill">
+                  <label>CSS</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 90%;"></div>
+                  </div>
+                  <div class="percentage">90%</div>
+                </div>
+                <div class="skill">
+                  <label>JavaScript</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 65%;"></div>
+                  </div>
+                  <div class="percentage">65%</div>
+                </div>
+                <div class="skill">
+                  <label>Python</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 80%;"></div>
+                  </div>
+                  <div class="percentage">80%</div>
+                </div>
+              </div>
+              <div class="professional-skills">
+                <h3>Professional Skills</h3>
+                <div class="skill">
+                  <label>App Development</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 95%;"></div>
+                  </div>
+                  <div class="percentage">95%</div>
+                </div>
+                <div class="skill">
+                  <label>Web Development</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 85%;"></div>
+                  </div>
+                  <div class="percentage">85%</div>
+                </div>
+                <div class="skill">
+                  <label>Graphic Design</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 75%;"></div>
+                  </div>
+                  <div class="percentage">75%</div>
+                </div>
+                <div class="skill">
+                  <label>SEO Marketing</label>
+                  <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 80%;"></div>
+                  </div>
+                  <div class="percentage">80%</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
     
         <section id="portfolio" class="section">
             <h2>My latest projects</h2>
