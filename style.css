@@ -28,6 +28,7 @@ ul {
 }
 
 /* Navbar */
+/* الشريط الملاحي */
 .navbar {
     display: flex;
     justify-content: center;
@@ -41,6 +42,7 @@ ul {
     transition: background 0.3s ease;
 }
 
+/* الروابط داخل الشريط */
 .navbar a {
     color: #fff;
     font-size: 1rem;
@@ -49,14 +51,43 @@ ul {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* التأثير عند التحويم */
 .navbar a:hover {
     color: #1abc9c;
     transform: scale(1.1);
 }
 
+/* تحسين العرض للهواتف */
+@media (max-width: 768px) {
+    /* تقليص الحجم والمسافات على الهواتف */
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* تصغير حجم النص */
+        margin: 0 1rem; /* تقليل المسافة بين العناصر */
+    }
+
+    /* ضبط العناصر لتتوسط عند الشاشات الصغيرة */
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+/* تحسين العرض للهواتف الصغيرة */
+@media (max-width: 480px) {
+    /* تقليص الحجم بشكل أكبر */
+    .navbar a {
+        font-size: 0.8rem; /* تقليل حجم الخط بشكل أكبر */
+        margin: 0 0.5rem; /* تقليل المسافة بين الروابط */
+    }
+}
+
+
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 12rem 1rem;
@@ -224,7 +255,6 @@ ul {
     position: relative; /* لجعل الدائرة مستقلة */
     z-index: 0; /* تحت الصورة */
 }
-
 /* صورة الملف الشخصي */
 .profile-image {
     width: 200px; /* حجم الصورة */
