@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,75 +6,78 @@
 
 /* Fonts & Colors */
 body {
-  width: 100%;
-  height: 100%;
-  background-color: #0f172a;
-  background-image: linear-gradient(
-      45deg,
-      rgba(59, 130, 246, 0.08) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(59, 130, 246, 0.08) 75%
-    ),
-    linear-gradient(
-      -45deg,
-      rgba(59, 130, 246, 0.08) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(59, 130, 246, 0.08) 75%
-    ),
-    linear-gradient(
-      45deg,
-      transparent 40%,
-      rgba(99, 102, 241, 0.1) 40%,
-      rgba(99, 102, 241, 0.1) 60%,
-      transparent 60%
-    ),
-    linear-gradient(
-      -45deg,
-      transparent 40%,
-      rgba(99, 102, 241, 0.1) 40%,
-      rgba(99, 102, 241, 0.1) 60%,
-      transparent 60%
-    ),
-    radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-  background-size:
-    60px 60px,
-    60px 60px,
-    120px 120px,
-    120px 120px,
-    100% 100%;
-  background-position:
-    0 0,
-    30px 30px,
-    0 0,
-    60px 60px,
-    0 0;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a;
+    background-image: linear-gradient(
+        45deg,
+        rgba(59, 130, 246, 0.08) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(59, 130, 246, 0.08) 75%
+      ),
+      linear-gradient(
+        -45deg,
+        rgba(59, 130, 246, 0.08) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(59, 130, 246, 0.08) 75%
+      ),
+      linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(99, 102, 241, 0.1) 40%,
+        rgba(99, 102, 241, 0.1) 60%,
+        transparent 60%
+      ),
+      linear-gradient(
+        -45deg,
+        transparent 40%,
+        rgba(99, 102, 241, 0.1) 40%,
+        rgba(99, 102, 241, 0.1) 60%,
+        transparent 60%
+      ),
+      radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+    background-size:
+      60px 60px,
+      60px 60px,
+      120px 120px,
+      120px 120px,
+      100% 100%;
+    background-position:
+      0 0,
+      30px 30px,
+      0 0,
+      60px 60px,
+      0 0;
+    position: relative;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 10px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 10px
+      );
+    background-size: 20px 20px;
+    filter: blur(0.5px);
 }
+ 
+/* الوضع الداكن */
 
-.container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px,
-      transparent 10px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px,
-      transparent 10px
-    );
-  background-size: 20px 20px;
-  filter: blur(0.5px);
-}
-
+  
 
 h1, h2, h3 {
     color: #2c3e50;
@@ -145,6 +147,8 @@ ul {
         margin: 0 0.5rem; /* تقليل المسافة بين الروابط */
     }
 }
+
+
 
 
 /* Hero Section */
@@ -354,8 +358,118 @@ ul {
 
 
 
+#skills {
+    padding: 100px 20px;
+    background-origin: border-box;
+    text-align: center;
+  }
 
+  #skills h2 {
+    font-size: 36px;
+    color: #fff;
+  }
 
+  #skills h2 span {
+    color: #4cafef;
+    text-shadow: 0 0 10px #4cafef, 0 0 20px #4cafef;
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .coding-skills, .professional-skills {
+    width: 45%;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: #4cafef;
+    margin-bottom: 20px;
+  }
+
+  .skill {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .progress-bar {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    box-shadow: 0 0 10px #000;
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+
+  .progress {
+    background: linear-gradient(90deg, #4cafef, #08f);
+    height: 100%;
+    width: 0; /* تبدأ من 0 */
+    transition: width 1.5s ease-in-out;
+  }
+
+  .percentage {
+    font-size: 16px;
+    color: #4cafef;
+    text-shadow: 0 0 10px #4cafef, 0 0 20px #4cafef;
+    font-weight: bold;
+  }
+
+  /* التأثير عند المرور */
+  #skills:hover .progress {
+    width: var(--progress-width, 0);
+  }
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column; /* تكديس العناصر عموديًا */
+      align-items: center;
+    }
+  
+    .coding-skills,
+    .professional-skills {
+      width: 100%; /* تمديد العرض لملء الشاشة */
+      margin-bottom: 20px; /* إضافة مسافة بين الأقسام */
+    }
+  
+    .skill {
+      flex-direction: column; /* ترتيب العناصر عموديًا */
+      align-items: flex-start;
+      width: 100%; /* ضمان عرض كامل على الهواتف */
+    }
+  
+    .progress-bar {
+      width: 100%; /* ملء الشاشة */
+      margin: 10px 0; /* تقليل المسافات حول الشريط */
+    }
+  
+    .percentage {
+      position: static; /* تغيير الوضعية إلى طبيعية */
+      margin-top: 5px; /* مسافة أعلى الشريط */
+      text-align: center; /* محاذاة في المنتصف */
+    }
+  
+    h3 {
+      font-size: 20px; /* تقليل حجم النص للعناوين */
+    }
+  
+    label {
+      font-size: 14px; /* تقليل حجم النص ليتناسب مع الشاشات الصغيرة */
+    }
+  }
 /* Projects */
 /* تنسيق المشاريع في الوضع الطبيعي */
 .projects {
