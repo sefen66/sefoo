@@ -497,6 +497,34 @@ ul {
       font-size: 14px; /* تقليل حجم النص ليتناسب مع الشاشات الصغيرة */
     }
   }
+  .counter-section {
+    display: flex;
+    justify-content: space-around;
+    background: local;
+    padding: 50px 0;
+}
+
+
+.counter-box {
+    text-align: center;
+}
+.counter-section p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: wheat;
+  }
+  .counter-section h2{
+    color: #4cafef;
+  text-shadow: 0 0 10px #4cafef, 0 0 20px #4cafef;
+  font-weight: bold;
+  }
+.counter {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  
+}
 /* Projects */
 /* تنسيق المشاريع في الوضع الطبيعي */
 .projects {
