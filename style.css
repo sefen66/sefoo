@@ -576,16 +576,50 @@ ul {
     }
 }
 
-#services {
-    color: black; /* تغيير لون النص داخل قسم Services إلى الأسود */
+.services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-#services h2 {
-    color: black; /* تغيير لون العنوان إلى الأسود */
+.services-list li {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#services .services-list li {
-    color: black; /* تغيير لون النص داخل العناصر في القائمة إلى الأسود */
+.services-list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.services-list li i {
+  font-size: 2.5rem;
+  color: #007BFF;
+  margin-bottom: 15px;
+}
+
+.services-list li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.services-list li p {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .services-list li {
+      width: 100%;
+      max-width: 300px;
+  }
 }
 
 
