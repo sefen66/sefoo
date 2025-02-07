@@ -8,6 +8,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@900..900&display=swap" rel="stylesheet">
 
     <style>
         .social-links {
@@ -49,10 +51,9 @@
           
     </nav>
     <div class="hero-content">
-        <h1 class="highlighted-text">Welcome, I'm <span class="name-animation">Sefen Zkarya</span></h1>
+        <h1 class="highlighted-text">Welcome, I'm <span class="name-animation" id="typing-text"></span></h1>
         <p>Turning Ideas into Reality | 17-Year-Old App Developer</p>
         <a href="Sefen_Zkarya_CV.png" class="btn" download="Sefen_Zkarya_CV.png">Download CV</a>
-
     </div>
 </header>
 
@@ -240,6 +241,46 @@
   </footer>
     
     <script src="js/script.js"></script>
+    <script>
+        window.onload = function () {
+    const text = "Sefen Zkarya"; // النص الذي سيتم عرضه
+    const typingText = document.getElementById("typing-text");
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 150); // سرعة الكتابة (كل 150 مللي ثانية)
+        } else {
+            // تأخير قبل بدء الكتابة مرة أخرى
+            setTimeout(() => {
+                index = 0;
+                typingText.textContent = ""; // مسح النص لبدء الكتابة من جديد
+                typeWriter();
+            }, 1000); // تأخير قبل إعادة الكتابة (1000 مللي ثانية)
+        }
+    }
+
+    // بدء تأثير الكتابة
+    typeWriter();
+
+    // تأثير التوهج
+    const style = document.createElement("style");
+    style.textContent = `
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+            }
+            to {
+                text-shadow: 0 0 20px #007bff, 0 0 40px #007bff;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+};
+
+    </script>
         <script>
       window.addEventListener('scroll', function() {
           const navbar = document.querySelector('.navbar');
